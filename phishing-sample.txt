@@ -1,0 +1,28 @@
+phishing-sample.txtphishing-sample.txt
+Source: Public example (hooksecurity.co style) — saved for training
+Saved on: 2025-09-23
+Sanitized: yes (names & domains replaced with example.fake)
+
+From: "PayPal Support" <support@paypa1.com>
+To: aman.rajak@example.test
+Subject: Important: Suspicious activity on your account — Verify now
+Date: Tue, 23 Nov 2025 09:35:00 +0530
+
+--- Email body (plain text) ---
+
+Dear Customer,
+
+We detected unusual activity on your PayPal account and, as a precaution, have limited access until you confirm your identity.
+
+Please verify your information immediately to restore full access:
+Displayed link: https://www.paypal.com/verify
+Actual link: http://paypal-secure.example.fake/verify?uid=Qw3xYz
+
+If you do not verify within 24 hours, your account will be permanently limited.
+
+If you did not request this, please contact support immediately.
+
+Sincerely,
+PayPal Account Security Team
+
+Attachment: invoice_7921.zip  (DO NOT open — listed for evidence only)

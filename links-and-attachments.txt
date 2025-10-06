@@ -1,0 +1,57 @@
+
+Source file: phishing-sample.txt
+Saved on: 2025-09-23
+
+SUMMARY
+- This file documents the links and attachments visible in the phishing-sample.txt (sanitized sample). No links were clicked and no attachments were opened.
+
+LINKS
+1) Displayed link text:
+   - https://www.paypal.com/verify
+   Observed in email body exactly as shown.
+
+   Actual (real) link as shown in sample:
+   - http://paypal-secure.example.fake/verify?uid=Qw3xYz
+
+   Inspection notes:
+   - Displayed link appears to be official PayPal (https).
+   - Actual link uses a different domain: paypal-secure.example.fake (not paypal.com).
+   - Actual link in sample is HTTP (non-secure) in the example — suspicious (real phishing pages commonly use HTTPS too, but domain mismatch is primary issue).
+   - Query parameter uid=Qw3xYz — short random ID probably meant to appear unique/tracking-like.
+
+   Risk assessment:
+   - Strong phishing indicator: mismatch between shown and real URL domains.
+   - Typosquatting / deceptive subdomain/domain naming (paypal-secure.example.fake) attempts to appear trustworthy.
+
+   Recommended safe checks (do not click the link):
+   - Copy the URL string exactly (http://paypal-secure.example.fake/verify?uid=Qw3xYz) and paste it into a URL scanner like VirusTotal (URL tab) or URLScan.io.
+   - Prefer using an isolated browser or VM to open if you must, but avoid this unless required.
+
+   VirusTotal / URLScan guidance:
+   - Go to https://www.virustotal.com/ (URL tab), paste the full URL, and run a scan.
+   - Or use https://urlscan.io/ to submit the URL for a screenshot and technical details.
+   - Review results for indicators: whether other users reported it malicious, screenshots showing login forms, or known bad-host reputation.
+   - Note: submitting will share the URL with the service; if publishing the report, consider obfuscating the domain (replace . with [.] or mark as example.fake).
+
+ATTACHMENTS
+1) Attachment filename listed in sample:
+   - invoice_7921.zip
+
+   Observations:
+   - File extension: .zip (archive). Commonly used by attackers to compress malware (executables, scripts) or to bypass some filters.
+   - No file content is available in the sample; do NOT open or extract on a normal machine.
+
+   Risk assessment:
+   - High risk if opened: archive could contain .exe, .js, .vbs, or office macro-enabled documents.
+   - Treat as malicious until proven otherwise.
+
+   Recommended safe handling:
+   - Do not open the attachment on your host machine.
+   - If you must analyze the file, do so in an air-gapped or sandbox VM and upload a copy (not the original mailbox attachment) to VirusTotal or a malware analysis sandbox (e.g., Any.Run) for a behavioral analysis.
+   - Keep the filename in evidence; if sharing in public repo, consider sanitizing by adding .safe or replacing periods: invoice_7921[.]zip or invoice_7921.zip (sanitized).
+
+ADDITIONAL NOTES
+- Because the sample is sanitized and uses example.fake, URL scanner lookups will not return real results for this exact string. For real emails, always paste the *exact* URL shown in the email client into the scanner (copy the link target, not the displayed text).
+- When documenting results from VirusTotal or URLScan, save the scanner output as a text file or screenshot and place it into the repository under outputs/ or evidence/.
+
+END OF FILE

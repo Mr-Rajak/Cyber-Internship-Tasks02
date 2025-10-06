@@ -1,0 +1,5 @@
+Source: HookSecurity-style public example (hooksecurity.co style)
+Date saved: 2025-09-23
+Sanitized: yes — replaced brand domains with example.fake and removed PII
+Original sample type: public phishing template (PayPal impersonation)
+Notes: Contains display name vs email mismatch, visible link vs actual link, and an attachment filename. Saved for training/analysis.

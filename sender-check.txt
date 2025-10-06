@@ -1,0 +1,21 @@
+Source file: phishing-sample.txt
+Saved on: 2025-09-23
+
+Sender name: PayPal Support
+Sender email: support@paypa1.com
+
+1) Domain match:
+   - Claimed brand: PayPal
+   - Actual domain: paypa1.com
+   - Mismatch detected — likely spoofed.
+
+2) Domain legitimacy check:
+   - Domain not part of official PayPal infrastructure.
+   - Typo squatting pattern (digit “1” replacing letter “l”).
+   - No public evidence that paypa1.com is used by PayPal.
+
+3) Reputation check summary:
+   - Domain newly registered and not associated with PayPal.
+   - Likely used in phishing or impersonation attempts.
+
+Verdict: Sender address is spoofed or impersonating PayPal.

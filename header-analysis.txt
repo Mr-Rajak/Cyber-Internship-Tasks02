@@ -1,0 +1,31 @@
+
+Source file: phishing-sample.txt
+Saved on: 2025-09-23
+Notes: Original phishing-sample.txt is a sanitized plain-text sample and does NOT include raw RFC-822 headers (Received:, DKIM-Signature, etc.)
+
+1) Current status
+- Raw headers: NOT present in phishing-sample.txt
+- .eml available: NO
+- Action required to perform full header analysis: Obtain the raw message headers from the original email client (Gmail: Show original; Outlook: View message details; Thunderbird: View source) or save the message as .eml.
+
+2) Recommended header analyzers (free)
+- MX Toolbox Email Header Analyzer — https://mxtoolbox.com/EmailHeaders.aspx. Use to parse headers and examine Received chain and auth results.  
+- Google Message header / Toolbox — https://toolbox.googleapps.com/apps/messageheader/ — good for quick analysis.  
+- Microsoft / Message Header Analyzer variants — useful for Exchange/Office365 headers.
+
+3) How to perform the analysis (steps to run when you have headers)
+a. Copy full raw headers from the email client.
+b. Paste into an analyzer (MX Toolbox or Google Message header).
+c. Save the analyzer output (copy text or screenshot) to outputs/header-analyzer-output.txt or outputs/header-analyzer-screenshot.png.
+d. Record key security results below (SPF/DKIM/DMARC + Received hops).
+
+4) Example analysis (this is an illustrative example — replace with real results once you run the analyzer)
+- SPF: fail  (example) — sending IP 203.0.113.45 not authorized in SPF for paypal.com.
+- DKIM: none (example) — no DKIM-Signature header present for paypal.com.
+- DMARC: policy = none; DMARC alignment = fail (example).
+- Received-chain anomaly: Originating hop shows mail-from server mail.example.fake (country X) that is unrelated to paypal.com.
+- Verdict (example): Authentication failed — message likely forged / spoofed.
+
+5) Evidence saved (place real analyzer output here when available)
+- outputs/header-analyzer-output.txt  (paste analyzer output here)
+- outputs/header-analyzer-screenshot.png (optional screenshot)

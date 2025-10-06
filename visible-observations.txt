@@ -1,0 +1,50 @@
+Source file: phishing-sample.txt
+Saved on: 2025-09-23
+
+1) From / Display name
+- Display name: "PayPal Support"
+- Sender email address: support@paypa1.com
+- Initial observation: Display name suggests PayPal; actual email domain is paypa1.com (uses the digit '1' instead of 'l') — suspicious.
+
+2) To
+- To: aman.rajak@example.test
+- Observation: Message addressed to a specific test address; however greeting in body is generic ("Dear Customer") — inconsistent.
+
+3) Subject
+- Subject: Important: Suspicious activity on your account — Verify now
+- Observation: Uses urgency and account security language to prompt action.
+
+4) Date / Time
+- Date: Mon, 23 Nov 2025 09:35:00 +0530
+- Observation: Recent-sounding timestamp (for our test). Useful for header timeline when we analyze Received lines.
+
+5) First lines of the body / Greeting
+- First visible lines:
+  
+	"Dear Customer,
+	We detected unusual activity on your PayPal account and, as a precaution, have limited access until you confirm your identity."
+
+- Observation: Generic greeting (no real name); threatening/account-limiting language to force immediate action.
+
+6) Links (visible vs actual)
+- Displayed link text: https://www.paypal.com/verify
+- Actual link (as shown in sample): http://paypal-secure.example.fake/verify?uid=Qw3xYz
+- Observation: Visible link appears as official PayPal, but actual URL points to a suspicious domain (example.fake) and is HTTP not HTTPS (in sample) — strong phishing indicator.
+
+7) Attachments
+- Listed attachment: invoice_7921.zip
+- Observation: ZIP file attached — compressed executables or archives are commonly used to hide malware. Never open.
+
+8) Branding / signature
+- Signature: "PayPal Account Security Team"
+- Observation: Brand name used in display name and signature, but mismatch in sender domain and generic phrasing reduce trust.
+
+9) Overall visible-field risk indicators (quick list)
+- Display name / sender email mismatch (paypa1.com vs paypal.com).
+- Generic greeting instead of personalized name.
+- Urgent language with deadline ("24 hours").
+- Visible vs actual link mismatch and non-secure scheme in sample.
+- Suspicious attachment (invoice_7921.zip).
+- Inconsistencies that suggest impersonation.
+
+End of visible-observations.txt
